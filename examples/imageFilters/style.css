@@ -1,0 +1,119 @@
+.img-thumbnail {
+    width: 250px;
+    height: 250px;
+}
+
+#slike {
+    padding-top: 70px;
+}
+
+.grayscale img {
+    filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+}
+
+.grayscale img:hover {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+}
+
+.blur img{
+    filter: blur(5px);
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+}
+
+.blur img:hover {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+}
+
+.sepia img {
+    filter: sepia(100);
+    -webkit-filter: sepia(1);
+    -moz-filter: sepia(1);
+}
+
+.sepia img:hover {
+    filter: sepia(0);
+    -webkit-filter: sepia(0);
+    -moz-filter: sepia(0);
+}
+
+.invert img {
+    filter: invert(1);
+    -webkit-filter: invert(1);
+    -moz-filter: invert(1);
+}
+
+.invert img:hover {
+    filter: invert(0);
+    -webkit-filter: invert(0);
+    -moz-filter: invert(0);
+}
+
+.opacity img{
+    opacity: 0.3;
+}
+
+.opacity img:hover {
+    opacity: 1;
+}
+
+.saturate img {
+    filter: saturate(500%);
+    -webkit-filter: saturate(500%);
+    -moz-filter: saturate(500%);
+}
+
+.saturate img:hover {
+    filter: saturate(100%);
+    -webkit-filter: saturate(100%);
+    -moz-filter: saturate(100%);
+}
+
+.contrast img {
+    filter: contrast(2);
+    -webkit-filter: contrast(2);
+    -moz-filter: contrast(2);
+}
+
+.contrast img:hover {
+    filter: contrast(1);
+    -webkit-filter: contrast(1);
+    -moz-filter: contrast(1);
+}
+
+.brightness img {
+    filter: brightness(.5);
+    -webkit-filter: brightness(.5);
+    -moz-filter: brightness(.5);
+}
+
+.brightness img:hover {
+    filter: brightness(1);
+    -webkit-filter: brightness(1);
+    -moz-filter: brightness(1);
+}
+
+.hue img {
+    filter: hue-rotate(270deg);
+    -webkit-filter: hue-rotate(270deg);
+    -moz-filter: hue-rotate(270deg);
+}
+
+.hue img:hover {
+    filter: hue-rotate(0);
+    -webkit-filter: hue-rotate(0);
+    -moz-filter: hue-rotate(0);
+}
+
+.dropShadow img:hover {
+    filter: drop-shadow(15px 15px 10px rgba(0,0,0,0.8));
+    -webkit-filter: drop-shadow(15px 15px 10px rgba(0,0,0,0.8)); 
+    -moz-filter: drop-shadow(15px 15px 10px rgba(0,0,0,0.8));
+}
+

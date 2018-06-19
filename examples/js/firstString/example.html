@@ -1,0 +1,27 @@
+<script>
+    var string = `abu`;
+    var string2 = `juhu`;
+    console.log(string.concat(string2));
+    console.log(string + " " + string2);
+    var string3 = `hello
+    world`;
+    console.log(string3);
+    var string4 = `juhu abu juhu juhu`
+    console.log(string4);
+    var string4_2 = string4.replace(`juhu`, `maci`);
+    console.log(string4_2);
+    console.log(string4.replace(/juhu/g, `maci`))
+    console.log(string4.toUpperCase())
+    console.log(string4.toLowerCase())
+    var string5 = `maci maci ${string} maci ==> ${1+5+4} = 10 ==> ${string + ' ' + string2}`
+    console.log(string5)
+    var names = `abu, combe, dudo, machi, juhu, refko `
+    console.log(names.includes(`abud`))
+    console.log(names.includes(`abu`))
+    var num = 1234567
+    var num2 = `1234567`
+    console.log(num)
+    console.log(num.toString())
+    console.log(num2)
+    console.log(parseInt(num2))
+</script>

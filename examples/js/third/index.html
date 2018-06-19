@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <script src="variables.js"></script>
+    <script src="functions.js"></script>
+    <button onclick="add(4,5)">add</button>
+    <button onclick="change(`abu`)">change</button>
+    <script src="conditions.js"></script>
+    <button onclick="check(12,`abu`)">check</button>
+    <script src="loops.js"></script>
+    <button onclick="loop(12)">Loop</button>
+
+
+    <div id="test">abu</div>
+    <button onclick="change()">Style</button>
+    <script>
+        function change() {
+            var test = document.querySelector('div')
+            console.log(test)
+            if (test.innerHTML == `abu`) {
+                test.innerHTML = `test`
+                test.style.color = `red`
+            } else {
+                test.innerHTML = `abu`
+                test.style.color = `black`
+            }
+        }
+    </script>
+
+</body>
+
+</html>
