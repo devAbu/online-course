@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>abu</title>
+        
+        <script>
+
+            var x = "5";
+            document.write(typeof x);
+
+            var y = null;
+            document.write(typeof y);
+
+            //if else
+            var abu = 1990;
+            if (abu % 500 == 0) {
+                document.write("true");
+            } else if ((abu % 4 == 0) || (abu % 100 != 0)) {
+                document.write("false");
+            } else {
+                alert("juhu");
+            }
+
+            //switch
+            
+            var abu = 2;
+            switch (abu) {
+                case 1: document.write("one"); break;
+                case 2: document.write("two"); break;
+                case 3: document.write("three"); break;
+                case 4: document.write("four"); break;
+                default: document.write("juhu"); break;
+            }
+
+            //while
+
+            var abu = 1;
+            while (abu <= 10) {
+                document.write(abu);
+                abu++;
+            }
+
+            //for
+
+            for (var abu = 1; abu <= 10; abu++) {
+                document.write(abu);
+            }
+
+            //break & continue;
+
+            for (var abu = 1; abu <= 10; abu++) {
+                if (abu == 6) {
+                    break;
+                }
+                document.write(abu);
+            }
+
+            for (var abu = 1; abu <= 10; abu++) {
+                if (abu == 2) {
+                    continue;
+                }
+                document.write(abu);
+            }
+            </script>
+
+            
+            <script>
+                //function
+            function abu() {
+                alert("abu");
+            }
+            abu();
+
+            /* type conversion
+
+            "4" * "6" --> 24
+            "4" * 6 --> 24
+            "4" + "6" --> 46
+            "4" + 6 --> 46
+            */
+
+            //for-in loop
+                var book = { title: "juhu", author: "abu" };//object
+                var number = new Number(5); // object
+                document.write(number.valueOf());
+
+                for (var i in book) {
+                    document.write(i);
+                }
+
+                for (var a in book) {
+                    document.write(a + ":" + book[a]);
+                }
+
+                console.log(book.valueOf());
+
+
+                //JSON --> nesto slicno kao objekat u js
+                var book = '{"title": "juhu", "author": "abu", "price" : 52}';
+                book = JSON.parse(book);
+                console.log(book);
+
+                document.write("abu");
+
+      </script>
+
+    </head>
+
+    <body>
+
+        <script>
+            console.log("Everything work good!!!");
+        </script>
+
+    </body>
+</html>
