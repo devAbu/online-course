@@ -30,3 +30,20 @@ var color = {
     favourite: "no",
     like: "yes"
 }
+
+function display() {
+    var check = document.getElementById('check').value
+    if (check === true) {
+        document.getElementById('name').innerHTML = false
+    } else if (check === "true") {
+        displayName()
+    } else {
+        document.getElementById('name').innerHTML = `false2`
+        document.getElementById('name').style.color = `red`
+    }
+}
+
+function displayName() {
+    var name = document.getElementById('firstName').value
+    document.getElementById('name').innerHTML = name
+}
