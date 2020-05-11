@@ -1,0 +1,10 @@
+Instantiate & use class
+
+To create instantiate (object)
+$user = new User;
+
+Print a property
+echo $user->firstName;
+
+Call a method
+$user->register();

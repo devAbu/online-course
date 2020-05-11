@@ -1,0 +1,5 @@
+Classes can be extended to a child class --> Child classes have access to all of it's parents properties and methods (unless the private ones)
+<?php
+Class ChildClass extends ParentClass{
+    echo 'code here';
+}

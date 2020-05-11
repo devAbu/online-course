@@ -1,0 +1,13 @@
+Uses as a base
+
+Can not be instantiate, used directly
+
+Must be extended by another class
+
+If a property or method is abstract then the class must be also abstract
+
+abstract class Example{
+    abstract public function someFunction(){
+        echo 'code here';
+    }
+}

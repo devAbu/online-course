@@ -2,29 +2,28 @@
 
 class User
 {
+    public $userName;
+    /* Static -> ako se ne mijenja vrijednost property ili metoda */
+    /* Static property -> no instantiate */
+    public static $minPassLen = 5;
 
-    public static $minPassLength = 5; // ako je nesto uvijek isto
-
-    public static function validatePass($password)
+    public static function validatePassword($password)
     {
-        if (strlen($password) >= self::$minPassLength) {
+        /* Umjesto $this koristi se self:: */
+        if (strlen($password) >= self::$minPassLen) {
             return true;
         } else {
             return false;
         }
     }
-
 }
+/* Posto je klasa static (zbog static propery il metoda) nema instantiate*/
+$password = "juhuu";
 
-//nema potrebe da se initiate class-a
-$password = "password";
-
-if (User::validatePass($password)) {
-    echo 'good <br>';
+if (User::validatePassword($password)) {
+    echo 'dobar';
 } else {
-    echo 'bad <br>';
+    echo 'los';
 }
 
-echo User::$minPassLength;
-
-?>
+echo User::$minPassLen;

@@ -1,0 +1,37 @@
+OOP is a programming language model organized around objects rather than actions, and data rather than logic
+
+OOP concepts:
+- objects
+- classes
+- method & property
+- data abstraction & encapsulation
+- inheritance
+- polymorphism
+- constructor / destructor
+
+OOP advantages:
+- code reuse & recycling (u istoj app ili drugoj)
+- encapsulation
+- design benefits
+- software maintenance
+
+OOP disadvantages:
+- can be complicated to learn
+- require extra thinking
+- more code
+
+Visibility (properties and methods):
+- public --> accessible outside the class
+- protected --> accessible in class and any extended class
+- private --> accessible only in owner class
+
+<?php
+class Example
+{
+    public $property;
+    public function someFunction()
+    {
+        echo 'code here';
+    }
+}
+?>

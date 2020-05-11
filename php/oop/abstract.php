@@ -22,7 +22,7 @@ class Duck extends Animal
 
     public function makeSound()
     {
-        return "Quack";
+        return 'Quack';
     }
 }
 
@@ -35,13 +35,12 @@ class Dog extends Animal
 
     public function makeSound()
     {
-        return "Bark";
+        return 'Bark';
     }
 }
 
-$animal = new Dog();
-$animal->name = "Test";
-$animal->color = "Yellow";
+$animal = new Dog;
+$animal->name = "abu";
+$animal->color = "brown";
 echo $animal->describe();
-
 echo $animal->makeSound();

@@ -1,33 +1,28 @@
-<?php 
+<?php
 
 class Post
 {
     private $name;
 
-    public function __set($name, $value)
+    public function __set($key, $value)
     {
-        echo 'Setting ' . $name . " to " . $value . "<br>";
+        echo 'setting ' . $key . ' to ' . $value . ' <br>';
         $this->name = $value;
     }
 
-    public function __get($name)
+    public function __get($key)
     {
-        echo 'Getting ' . $name . " " . $this->name . "<br>";
+        echo 'getting ' . $key . ' from ' . $this->name  . ' <br>';
     }
 
-    public function __isset($name)
+    public function __isset($key)
     {
-        echo 'Is ' . $name . ' set? <br>';
+        echo 'Is ' . $key . ' set?' . ' <br>';
         return isset($this->name);
     }
 }
 
-$Post = new Post;
-
-$Post->name = "abu";
-
-echo $Post->name;
-
-var_dump(isset($Post->name));
-
-?>
+$post = new Post;
+$post->key = 'abu'; /* SET */
+echo $post->key; /* GET */
+var_dump(isset($post->key));
