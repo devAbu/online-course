@@ -1,0 +1,535 @@
+/* vrijednost moze biti i css attribute */
+/* IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v31/TK3_WkUHHAIjg75cFRf3bXL8LICs13FvgUE.ttf) format('truetype');
+}
+.beze {
+  width: 329.66666667px;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
+  font-family: "Oswald";
+  font-weight: 100;
+  /* border: @width @type @color; */
+  border: 10px #dadada solid;
+  max-width: 800px;
+  border-radius: 10%;
+  background-color: #dadada;
+  color: white;
+  z-index: 10;
+  min-width: 250;
+}
+/* varijabla uz tekst */
+.cover-jumbotron {
+  background-image: url("../images/jumbotron.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  prefix: ps-prefix;
+}
+ul.menu {
+  color: #f3f3f3;
+}
+ul.menu a {
+  color: #f3f3f3;
+}
+ul.menu .btn {
+  color: #dadada;
+}
+ul.menu .btn:hover,
+ul.menu .btn:visited {
+  color: #cdcdcd;
+}
+@media (min-width: 768px) {
+  ul.menu {
+    color: red;
+  }
+}
+nav div.collapse ul li a:hover {
+  width: 329.66666667px;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
+  font-family: "Oswald";
+  font-weight: 100;
+  /* border: @width @type @color; */
+  border: 10px #dadada solid;
+  max-width: 800px;
+  border-radius: 10%;
+  background-color: #dadada;
+  color: white;
+  z-index: 10;
+  min-width: 250;
+  color: #dadada !important;
+}
+a.dropdown-item:hover {
+  background-color: #a7a7a7 !important;
+}
+a.dropdown-item {
+  color: white !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+}
+.btn-light {
+  border: 1px solid #efefef !important;
+}
+#bg {
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  opacity: 0.7;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.jumbotron2 {
+  background-image: url("../images/sarajevo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.jumbotron3 {
+  background-image: url("../images/tours.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.jumbotron7 {
+  background-image: url("../images/skijanje.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.jumbotron8 {
+  background-image: url("../images/make.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.jumbotron9 {
+  background-image: url("../images/apartment.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.jumbotron4 {
+  background-image: url("../images/book.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.jumbotronMy {
+  background-image: url("../images/myCartBg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.jumbotron5 {
+  background-image: url("../images/places.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.jumbotron6 {
+  background-image: url("../images/rent.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+#jumbotronFeedback {
+  background-image: url("../images/feedback.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.link:hover {
+  color: #002988 !important;
+}
+#brandText:hover {
+  color: #002988;
+}
+#why {
+  background-image: url("../images/why.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 182px !important;
+}
+.why-2 {
+  background-image: url("../images/why2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.bg {
+  background-image: url("../images/aboutUsBG.jpg");
+  background-size: cover;
+  background-position: center;
+  /* max-height: 330px;*/
+}
+#abufb:hover {
+  cursor: pointer;
+}
+#button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: #c4c4c4;
+  background-color: #5f5f5f;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+}
+#button:hover {
+  opacity: 0.8;
+}
+#search-loged {
+  width: 80%;
+  -webkit-transition: width 0.8s ease-in-out;
+  transition: width 0.8s ease-in-out;
+  -moz-transition: width 0.8s ease-in-out;
+  -ms-transition: width 0.8s ease-in-out;
+  -o-transition: width 0.8s ease-in-out;
+}
+#search-loged:focus {
+  width: 100%;
+}
+@media only screen and (max-width: 480px) {
+  #makeTour {
+    margin-left: -30px;
+  }
+}
+#map:hover {
+  color: #a08600 !important;
+}
+input[type="button"] {
+  content: "<button type='button' class='btn btn-outline-warning' id='oko'> <i class='fas fa-eye'></i> </button>";
+}
+footer {
+  z-index: 1 !important;
+}
+.aboutUs {
+  opacity: 0.8;
+  -webkit-transition: opacity 0.5s ease-out;
+  filter: grayscale(1) sepia(100);
+  -webkit-filter: grayscale(1) sepia(100);
+  -moz-filter: grayscale(1) sepia(100);
+  -webkit-transition: ease-out;
+  -webkit-transition-duration: 0.8s;
+}
+.aboutUs:hover {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-in;
+  filter: grayscale(0) sepia(0);
+  -webkit-filter: grayscale(0) sepia(0);
+  -moz-filter: grayscale(0) sepia(0);
+  -webkit-transition: ease-in;
+  -webkit-transition-duration: 0.8s;
+}
+.index {
+  transition: transform 2s;
+}
+.index:hover {
+  filter: drop-shadow(15px 15px 10px rgba(0, 0, 0, 0.8));
+  -webkit-filter: drop-shadow(15px 15px 10px rgba(0, 0, 0, 0.8));
+  -moz-filter: drop-shadow(15px 15px 10px rgba(0, 0, 0, 0.8));
+  transform: scale(1.1);
+  z-index: -1 !important;
+}
+.prva1 {
+  z-index: 1;
+}
+.prva2 {
+  z-index: -1;
+}
+.index2 {
+  transition: transform 2s;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+}
+.index2:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+.tourPlans {
+  opacity: 0.8;
+  -webkit-transition: opacity ease-out;
+  filter: grayscale(1) sepia(1);
+  -webkit-filter: grayscale(1) sepia(1);
+  -moz-filter: grayscale(1) sepia(1);
+  -webkit-transition: ease-out;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.tourPlans:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease-in;
+  filter: grayscale(0) sepia(0);
+  -webkit-filter: grayscale(0) sepia(0);
+  -moz-filter: grayscale(0) sepia(0);
+  -webkit-transition: ease-in;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-duration: 0.5s;
+}
+.hotel img {
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+}
+.hotel:hover img {
+  opacity: 1;
+  animation: flash 1.8s;
+  -webkit-animation: flash 1.8s;
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+}
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.best {
+  filter: sepia(1);
+  -webkit-filter: sepia(1);
+  -moz-filter: sepia(1);
+  transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+}
+.best:hover {
+  filter: sepia(0);
+  -webkit-filter: sepia(0);
+  -moz-filter: sepia(0);
+  transition: all 0.6s ease-in;
+  transform: scale3d(2);
+}
+.more {
+  color: gold !important;
+}
+.more:hover {
+  color: goldenrod !important;
+}
+.days:hover {
+  cursor: pointer !important;
+}
+.days {
+  height: 65px;
+}
+.center {
+  position: absolute;
+  left: 38%;
+}
+@media only screen and (max-width: 990px) {
+  #footerEmail {
+    margin-left: 0px !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #footerEmail {
+    margin-left: 60px !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #footerEmail {
+    margin-left: 60px !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  #footerAddress {
+    margin-left: 50px !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  #bestPlacesMain {
+    margin-left: 0px !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  #feedback {
+    margin-left: 0px !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #copyright {
+    margin-left: 0px !important;
+  }
+}
+@media only screen and (min-width: 1199px) {
+  #forgotLogin {
+    margin-left: 80px !important;
+  }
+}
+@media only screen and (max-width: 676px) {
+  .selectTour {
+    margin-top: 0px !important;
+    float: none !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  #priceField {
+    margin-top: 25px !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  #priceInput {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #priceInput {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #other {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  #other {
+    width: 105%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #send {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 960px) {
+  #offerFeedback {
+    max-width: 750px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* vrijednost ostaje samo u media query */
+  .textFooter {
+    margin-left: 25%;
+  }
+  .foo {
+    width: 500px;
+  }
+}
+/*
+@minWidth: 900px;  
+ovo bi overwirte gore definisanu varijablu */
+.foo {
+  width: 100%;
+}
+#indexTour {
+  font-size: 4vh;
+}
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: scale(4);
+}
+.hidden {
+  display: none;
+}
+.pass {
+  position: relative;
+}
+.passIcon {
+  position: absolute;
+  top: 10%;
+  padding: 9px 8px;
+  left: 90%;
+}
+.passIcon2 {
+  position: absolute;
+  top: 10%;
+  padding: 9px 8px;
+  left: 90%;
+}
+label.error {
+  margin-left: 5%;
+  margin-top: 3px;
+  color: red;
+  font-size: 17px;
+}
+#test {
+  color: white !important;
+}
+.em {
+  position: relative;
+}
+.emIcon {
+  position: absolute;
+  top: 10%;
+  padding: 9px 8px;
+  left: 90%;
+}
+#payButton {
+  width: 6em;
+}
+#payButton:hover span {
+  display: none;
+}
+#payButton:hover {
+  background-color: #ffffff !important;
+}
+#payButton:hover:before {
+  font-family: "Font Awesome\ 5 Free";
+  font-weight: 400;
+  content: "\f058";
+  color: #428bca;
+}
+#pay {
+  width: 6em;
+}
+#pay:hover span {
+  display: none;
+}
+#pay:hover {
+  background-color: #ffffff !important;
+}
+#pay:hover:before {
+  font-family: "Font Awesome\ 5 Free";
+  font-weight: 400;
+  font-size: 50px;
+  content: "\f058";
+  color: #428bca;
+}
+.logo {
+  filter: brightness(2);
+}

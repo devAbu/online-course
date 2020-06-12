@@ -1,0 +1,44 @@
+@plugin '../more-less.js';
+
+@box-shadow: {
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+;
+
+//mixins
+.font-info() {
+    font-family: "Oswald";
+}
+
+.box-me(@width, @color: @primaryColor, @type: solid) {
+    //za default value -> @width: 1px...ali ga opet mozemo overwrite sa .box-me(2px)
+    /* border: @width @type @color; */
+    //da se oznace svi parametri
+    border: @arguments
+}
+
+.multi(@x, @y) {
+    @result: @x * @y;
+}
+
+//namespace
+#nameSpace {
+    .box-me-2(@radius: 10%) {
+        border-radius: @arguments;
+    }
+}
+
+//guards u mixins
+
+.some-color() {
+    background-color: @primaryColor;
+}
+
+.some-color() when (lightness(@primaryColor) > 50%) {
+    color: white;
+}
+
+.some-color() when (lightness(@primaryColor) <=50%) {
+    color: black;
+}
