@@ -1,0 +1,56 @@
+@primaryColor: rgb(167, 142, 5);
+
+@secondaryColor: grey;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav,
+footer {
+
+    a {
+        color: @primaryColor  !important;
+
+        &:hover {
+            color: lighten(@primaryColor, 8%) !important;
+            text-decoration: none;
+        }
+    }
+}
+
+footer {
+
+    button {
+        color: darken(@primaryColor, 10%) !important;
+        background-color: lighten(@secondaryColor, 10%) !important;
+        border-color: lighten(@secondaryColor, 10%) !important;
+    }
+
+}
+
+.media {
+    background-color: lighten(@secondaryColor, 45%);
+
+    h5 {
+        color: darken(@primaryColor, 10%)
+    }
+
+    p {
+        color: darken(@primaryColor, 4%)
+    }
+}
+
+.card {
+
+    .card-header,
+    .card-footer {
+        color: darken(@primaryColor, 10%);
+        background-color: lighten(@secondaryColor, 45%);
+    }
+
+    .card-body {
+        color: darken(@primaryColor, 4%)
+    }
+}

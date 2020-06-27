@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+nav a,
+footer a {
+  color: #a78e05 !important;
+}
+nav a:hover,
+footer a:hover {
+  color: #cfb006 !important;
+  text-decoration: none;
+}
+footer button {
+  color: #756404 !important;
+  background-color: #9a9a9a !important;
+  border-color: #9a9a9a !important;
+}
+.media {
+  background-color: #f3f3f3;
+}
+.media h5 {
+  color: #756404;
+}
+.media p {
+  color: #937d04;
+}
+.card .card-header,
+.card .card-footer {
+  color: #756404;
+  background-color: #f3f3f3;
+}
+.card .card-body {
+  color: #937d04;
+}
