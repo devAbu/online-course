@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+form {
+  width: 80%;
+  margin: auto;
+}
+form textarea {
+  resize: none;
+}
+form input {
+  margin: 1em 0;
+}
