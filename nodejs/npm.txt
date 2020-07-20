@@ -1,0 +1,21 @@
+npm - v-- > version
+
+npm install - g npm-- > update npm, -g = global
+
+npm install package = npm i package
+
+npm i-- > from package.json
+
+npm i - D package-- > -D = development
+
+npm init-- > create package.json
+
+/* *** SEMANTIC VERSIONING or SemVer *** */
+Example:
+    1.2 .0
+1 - > Major: Breaking changes
+2 - > Minor: Backward Compatible
+0 - > Patch: Bug fixes
+
+    ~1.2 .3 = 1.2.x, ^ 1.2 .3 = 1. x .3
+    --semver.npmjs.com = semver calculator

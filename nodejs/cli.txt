@@ -1,0 +1,6 @@
+node - v-- > version
+node - p "os.cpus().length"-- > core number
+node - p "process.versions.v8"-- > v8 version
+node - h( | less) -- > functions ' list
+
+console.log('hello') = process.stdout.write('hello')
