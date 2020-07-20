@@ -19,3 +19,7 @@ Example:
 
     ~1.2 .3 = 1.2.x, ^ 1.2 .3 = 1. x .3
     --semver.npmjs.com = semver calculator
+
+npm update-- > to update
+
+npm outdated - > outdated package
