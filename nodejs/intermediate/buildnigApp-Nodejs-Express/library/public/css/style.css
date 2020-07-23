@@ -103,6 +103,7 @@ a:hover {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: .08em;
+  padding-right: 1em;
 }
 
 .navbar-bright li>a:hover {
