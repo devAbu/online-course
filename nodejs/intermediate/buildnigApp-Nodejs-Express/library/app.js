@@ -3,13 +3,32 @@ const chalk = require('chalk'); // give a color to log messages
 const debug = require('debug')('app'); // run only in debug mode - not in production => set DEBUG=*(or file_name) & nodemon (or node) file_name
 const morgan = require('morgan');
 const path = require('path'); // fix the path
+const mssql = require('mssql');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 debug.log = console.log.bind(console);
 
+const config = {
+  user: 'abu',
+  password: 'aburefko159753',
+  server: 'DESKTOP-RSE60UO',
+  database: 'library',
+
+  options: {
+    encrypt: true,
+  },
+};
+
+mssql.connect(config).catch((err) => debug.log(err));
+
 app.use(morgan('tiny')); // combined for more info
+
+app.use((req, res, next) => {
+  debug.log('middleware');
+  next();
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 

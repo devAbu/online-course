@@ -1,47 +1,46 @@
 const express = require('express');
+const mssql = require('mssql');
 
 const bookRouter = express.Router();
 
 function router(nav) {
-  const books = [{
-      title: 'War and Peace',
-      genre: 'Historical',
-      author: 'Abu',
-      read: false,
-    },
-    {
-      title: 'Juhu',
-      genre: 'HUJU',
-      author: 'Abu',
-      read: false,
-    },
-    {
-      title: 'Super lose',
-      genre: 'juhu huju',
-      author: 'ljepotan',
-      read: false,
-    },
-  ];
-
   bookRouter.route('/').get((req, res) => {
-    res.render('books', {
-      title: 'Books',
-      nav,
-      books,
-    });
+    (async function query() {
+      const request = new mssql.Request();
+
+      const result = await request.query('select * from books');
+
+      res.render('books', {
+        title: 'Books',
+        nav,
+        books: result.recordset,
+      });
+    }());
   });
 
-  bookRouter.route('/single/:id').get((req, res) => {
-    const {
-      id,
-    } = req.params;
+  bookRouter.route('/single/:id')
+    .all((req, res, next) => {
+      (async function query() {
+        const {
+          id,
+        } = req.params;
+        const request = new mssql.Request();
 
-    res.render('book', {
-      title: 'Books',
-      nav,
-      book: books[id],
+        const result = await request.query(`select * from books where id = ${id}`);
+        /* await request.input('id', sql.Int, id).query('select * from books where id = @id') */
+
+        /* req.bookId = result.recordset[0]; */
+        [req.bookId] = result.recordset;
+        next();
+      }());
+    })
+    .get((req, res) => {
+      res.render('book', {
+        title: 'Books',
+        nav,
+        book: req.bookId,
+      });
     });
-  });
 
   return bookRouter;
 }
