@@ -4,6 +4,10 @@ const debug = require('debug')('app'); // run only in debug mode - not in produc
 const morgan = require('morgan');
 const path = require('path'); // fix the path
 const mssql = require('mssql');
+const bodyParser = require('body-parser');
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -25,8 +29,20 @@ mssql.connect(config).catch((err) => debug.log(err));
 
 app.use(morgan('tiny')); // combined for more info
 
+app.use(bodyParser.json()); // for post
+app.use(bodyParser.urlencoded({
+  extended: false,
+}));
+
+app.use(cookieParser());
+app.use(session({
+  secret: 'library',
+}));
+
+require('./src/config/passport.js')(app);
+
 app.use((req, res, next) => {
-  debug.log('middleware');
+  debug.log('middleware function');
   next();
 });
 
@@ -51,8 +67,13 @@ const nav = [{
 ];
 
 const bookRouter = require('./src/routes/bookRoute')(nav);
+const adminRouter = require('./src/routes/adminRoute')(nav);
+const authRouter = require('./src/routes/authRoute')(nav);
+
 
 app.use('/books', bookRouter);
+app.use('/admin', adminRouter);
+app.use('/auth', authRouter);
 
 app.get('/', (req, res) => {
   /* res.sendFile(__dirname + '/views/index.html') */
