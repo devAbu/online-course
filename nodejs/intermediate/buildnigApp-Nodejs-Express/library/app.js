@@ -70,7 +70,6 @@ const bookRouter = require('./src/routes/bookRoute')(nav);
 const adminRouter = require('./src/routes/adminRoute')(nav);
 const authRouter = require('./src/routes/authRoute')(nav);
 
-
 app.use('/books', bookRouter);
 app.use('/admin', adminRouter);
 app.use('/auth', authRouter);
