@@ -1,8 +1,5 @@
-/* function add(n1, n2) {
-  return n1 + n2;
-} */
-var add = function (n1, n2, showResult, resultMessage) {
-    var result = n1 + n2;
+let add = (n1, n2, showResult, resultMessage) => {
+    const result = n1 + n2;
     if (showResult) {
         console.log(resultMessage + result);
     }
@@ -10,10 +7,9 @@ var add = function (n1, n2, showResult, resultMessage) {
         return n1 + n2;
     }
 };
-var number1 = 5;
-var number2 = 10;
-var printResult = true;
-var resultPhrase = 'Result is: ';
-/* const result = add(number1, number2, printResult);
-console.log(result); */
+const number1 = 5;
+const number2 = 10;
+const printResult = true;
+const resultPhrase = 'Result is: ';
+let undefine;
 add(number1, number2, printResult, resultPhrase);
