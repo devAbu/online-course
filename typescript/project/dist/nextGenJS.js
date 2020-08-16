@@ -1,3 +1,4 @@
+"use strict";
 const userName = 'abu';
 let age = 30;
 age = 22;
@@ -32,3 +33,4 @@ console.log(`Hobbies: ${hobbies}`);
 console.log(`Hobby1 : ${hobby1}, Hobby2: ${hobby2}, Remaining Hobbies: ${remainingHobbies}`);
 const { firstName: user_name, userAge } = person;
 console.log(person, user_name, userAge);
+//# sourceMappingURL=nextGenJS.js.map

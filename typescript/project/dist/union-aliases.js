@@ -1,3 +1,4 @@
+"use strict";
 let combine = (input1, input2, resultType) => {
     let result;
     if (typeof input1 === 'number' && typeof input2 === 'number' || resultType === 'as-number') {
@@ -26,3 +27,4 @@ function greet2(user) {
 function isOlder2(user, checkAge) {
     return checkAge > user.age;
 }
+//# sourceMappingURL=union-aliases.js.map

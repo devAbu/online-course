@@ -1,3 +1,4 @@
+"use strict";
 let userInput;
 let userName;
 userInput = 5;
@@ -9,3 +10,4 @@ function generateError(message, code) {
     throw { message: message, errorCode: code };
 }
 generateError('juhu', 120);
+//# sourceMappingURL=unknown-never.js.map

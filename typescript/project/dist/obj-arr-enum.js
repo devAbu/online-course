@@ -1,3 +1,4 @@
+"use strict";
 var Role;
 (function (Role) {
     Role[Role["ADMIN"] = 5] = "ADMIN";
@@ -33,3 +34,4 @@ const product2 = {
 for (const hobby of person.hobbies) {
     console.log(hobby.toUpperCase());
 }
+//# sourceMappingURL=obj-arr-enum.js.map

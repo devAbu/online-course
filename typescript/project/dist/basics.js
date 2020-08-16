@@ -1,3 +1,4 @@
+"use strict";
 let add = (n1, n2, showResult, resultMessage) => {
     const result = n1 + n2;
     if (showResult) {
@@ -13,3 +14,4 @@ const printResult = true;
 const resultPhrase = 'Result is: ';
 let undefine;
 add(number1, number2, printResult, resultPhrase);
+//# sourceMappingURL=basics.js.map
