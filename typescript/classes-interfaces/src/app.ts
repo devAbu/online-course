@@ -1,147 +1,69 @@
-/*Abstract class - Can not be initiate */
-/* Singleton class - can have only one instance - private constructor + static method */
-abstract class Department {
-  /* private readonly ID: string;
-  name: string;  // default is PUBLIC*/
-  static year = 2020;
-  protected employees: string[] = [];
-  /* private - only accessible inside the class */
-  /* protected - accessible from that class and all subclasses (inheritance) */
+/* Interfaces - define/describe the structure of the object or function- custom type*/
+/* type Person = {..} */
+interface Person {
+  /* Access modifiers can not be added in Interface, but READONLY can */
+  name: string; //can not assign a value to the variable
+  age: number;
 
-  /* Constructor can not be static */
-  constructor(protected readonly ID: string, public name: string) { //readonly - can not change after initialization
-    /* this.ID = ID;
-     this.name = n; */
-    /* console.log(this.year) ERROR , can not access static property or method inside the class with this */
-    console.log(Department.year);
-  }
-
-  static createEmployee(name: string) {
-    return { name };
-  }
-  /* describe(this: Department) {
-    console.log(`Department ${this.ID}:  ${this.name}`);
-  } */
-
-  /* ABSTRACT CLASS - need to be implemented in all subclasses*/
-  abstract describe(this: Department): void;
-
-  addEmployee(employee: string) {
-    /* this.ID = '321'; ERROR - can not change it because it is readonly*/
-    this.employees.push(employee);
-  }
-
-  printEmployeeInfo() {
-    console.log(this.employees.length, this.employees);
-  }
-}
-/* INHERITANCE */
-class ITDepartment extends Department {
-  admins: string[];
-  constructor(id: string, admins: string[]) {
-    super(id, 'IT');/* CALL CONSTRUCT FROM INHERITANCE CLASS */
-    this.admins = admins;
-  }
-
-  describe() {
-    console.log('IT department');
-  }
+  greet(phrase: string): void;
 }
 
-class AccountingDepartment extends Department {
-  private lastReport: string;
-  private static instance: AccountingDepartment;
+let user1: Person; // Interface as a type
 
-  /* GETTERS - WITH GET lastReport became publicly accessible */
-  get mostRecentReport() {
-    if (this.lastReport) {
-      return this.lastReport;
-    }
-    throw new Error('No report found');
+user1 = {
+  name: 'Abu',
+  age: 22,
+  greet(phrase: string) {
+    console.log(phrase + ' ' + this.name);
   }
+};
 
-  /* SETTER -  */
-  set mostRecentReport(value: string) {
-    this.addReport(value);
-  }
+user1.greet('Hi,');
 
-  static getInstance() {
-    if (AccountingDepartment.instance) {
-      return this.instance;
-    }
-    this.instance = new AccountingDepartment('d2', []);
-    return this.instance;
-  }
-
-  private constructor(id: string, private reports: string[]) {
-    super(id, 'Accounting');
-    this.lastReport = reports[0];
-  }
-
-  addReport(text: string) {
-    this.reports.push(text);
-    this.lastReport = text;
-  }
-
-  /* OVERRIDING - Override the method from the main/inheritance class. Method name, parameters and return type must be the same */
-  addEmployee(name: string) {
-    if (name === 'Abu') {
-      return;
-    }
-    /* If employees property is PRIVATE in the main class (Department) we will can ERROR */
-    this.employees.push(name);
-  }
-
-  printReports() {
-    console.log(this.reports);
-  }
-
-  describe() {
-    console.log('Accounting department');
-  }
+/* INHERITANCE/EXTEND INTERFACE */
+interface Named {
+  readonly name: string;
+  outputName?: string; // ? - optional property
+  someFunction?(something: string): void // ? - optional method
 }
 
-/* const accounting = new Department('123', 'Accounting');
-console.log(accounting);
+interface Greetable extends Named { // for multiple use ","
+  greet(phrase: string): void;
+}
 
-accounting.describe(); */
+class User implements Greetable { //for multiple use ","
+  name: string; // with readonly in Interface, this will also be readonly
+  /* name?: string; //optional property */
+  age: number = 22;
+  constructor (name: string) { // name?: string - optional...or set default value for parameter
+    this.name = name;
+  }
 
-/* const accountingCopy = { describe: accounting.describe };
-accountingCopy.describe(); // undefined - accountingCopy doesn't have a problem called name
-/* with THIS : DEPARTMENT we will can error *
-/* FIX: add name as property*
-const accountingCopy2 = { name: 'Abu', describe: accounting.describe };
-accountingCopy2.describe(); */
+  greet(phrase: string) {
+    console.log(phrase + ' ' + this.name);
+  }
+}
+let user: Greetable;
+user = new User('Abu');
+console.log(user)
+user.greet('Hi')
 
-/* accounting.addEmployee('Abu');
-accounting.addEmployee('Combe'); */
+/* Define function type with TYPE */
+/* type AddFun = (n1: number, n2: number) => number;
 
-/* accounting.employees[2] = "Test"; ERROR because employees is private*/
-/* accounting.name = "Test"; Will work since the property name is public */
+let add: AddFn;
 
-/* accounting.printEmployeeInfo(); */
+add = (n1: number, n2: number) => n1 + n2;
+*/
 
-const ITAccounting = new ITDepartment('555', ['Abu']);
-console.log(ITAccounting);
+/* USING INTERFACE */
+/* CUSTOM TYPES (EXAMPLE ABOVE) IS USED COMMONLY */
+interface AddFn {
+  (n1: number, n2: number): number; //as defining function just without its name
+}
 
-ITAccounting.addEmployee('Abu');
-ITAccounting.printEmployeeInfo();
-ITAccounting.describe()
+let add: AddFn;
 
-/* const accounting = new AccountingDepartment('999', []); */
-const accounting = AccountingDepartment.getInstance();
-console.log(accounting)
-/* console.log(accounting.mostRecentReport); */
+add = (n1: number, n2: number) => n1 + n2;
 
-accounting.addEmployee('Combe');
-accounting.addEmployee('Abu'); // will not be added
-accounting.mostRecentReport = 'Report' //SET
-accounting.addReport('something went wrong');
-console.log(accounting.mostRecentReport); // GET
-accounting.printReports();
-accounting.describe()
-/* new Math() - no need
-Math.pow() - static example */
-/* STATIC - access without initiate */
-const employee1 = Department.createEmployee('Abu static')
-console.log(employee1, Department.year)
+console.log(add(5, 4))
