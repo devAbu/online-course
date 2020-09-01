@@ -47,7 +47,7 @@ LEARN:
 - NEW PROJECT
   --- nest new project_name
 
--MODULES 
+-MODULES ---
 
 - Modules are an effective way to organize components by a closely related set of capabilities (per feature)
 - It's a good practice to have a folder per module, containing the module's components
@@ -62,7 +62,7 @@ LEARN:
 
 - GENERATE MODULE = nest g(enerate) module module_name
 
-- CONTROLLERS
+- CONTROLLERS ---
 
 - responsible for handling incoming requests and returning responses to the client
 - Bound to a specific path (/tasks)
@@ -72,9 +72,30 @@ LEARN:
 - DEFINING A CONTROLLER = by decorating a class with the @Controller decorator
 - accepts a string, which is the path to be handled by the controller 
 
-- HANDLERS
+- HANDLERS ---
 
 - are method within the controller class
 - decorated with decorators @Get, @Post, etc 
 
 - CREATE CONTROLLER = nest g controller controller_name (--no-spec == optional, not create .spec file)
+
+--- PROVIDERS ---
+
+- can be injected into constructors if decorated as an @Injectable, via dependency injection
+- can be a plain value, a class, sync/await factory, etc...
+- must be provided to a module for them to be usable - must be defined in the provider's array of a module
+- can be exported from a module and then be available to other modules that import it 
+
+--- SERVICES ---
+
+- defined as providers (not all providers are services)
+- common concept within software development
+- when services are wrapped with the Injectable decorator and are provided to a module, they act as singletons services. Which menas the same instance will be shared across the application acting as a single source of truth
+- the main source of business logic. (a service will be called from a controller to validate data, create an item in the database and return a response)
+
+- Create service - nest g service tasks --no-spec
+
+--- dependency injection ---
+
+- any component within the NestJS ecosystem can inject a provider that is decorated with the @Injectable
+- we define the dependencies in the constructor of the class. NestJS will take care of the injection for us, and it will then be available as a class property
