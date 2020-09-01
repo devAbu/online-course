@@ -1,0 +1,80 @@
+Open-source framework for building efficient, scalable Node.js server-side applications.
+
+NestJS was built with full support for Typescript
+
+Combines element of OOP. Functional and Reactive programming
+
+It makes use of robust HTTP server frameworks (Default is Express.js)
+
+It provides a level of abstraction above these frameworks, which makes it incredibly joyful to code in Typescript. However, it still exposes the original APIs directly to the developers.
+
+This allows to use Express specific library even when using NestJS (example)
+
+NestJS provides an out-of-the-box application architecture which allows developers and teams to create highly testable, scalable, loosely coupled and easy to maintain applications
+
+NestJS CLI - command line interface tool that helps to initialize and develop the applications
+
+DOCUMENTATION - https://docs.nestjs.com/
+
+LEARN:
+- NestJS Modules
+- NestJS Controllers
+- NestJS Services and Providers
+- Controller-to-Service communication
+- Validation using NestJS Pipes
+- CRUD operations
+- Error handling
+- Data Transfer Objects (DTO)
+- System modularity
+- Back-end development best practices
+- Configuration Management
+- Logging
+- Security best practices
+- Working with DB
+- Using TypeORM
+- Writing simple and complex queries using QueryBuilder
+- Performance when working with a DB
+- Authentication and Authorization
+- Protected resources
+- Ownership of tasks by users
+- JWT (JSON Web Token)
+- Password hashing, salts and properly storing Password
+- Polishing the application for Production
+- Deploy NestJS application to AWS (Amazon Web Server)
+- Deploy front-end application to Amazon S3
+- Wiring up the front-end and back-end
+
+- NEW PROJECT
+  --- nest new project_name
+
+-MODULES 
+
+- Modules are an effective way to organize components by a closely related set of capabilities (per feature)
+- It's a good practice to have a folder per module, containing the module's components
+- Modules are singletons, therefore a module can be imported by multiple other modules
+
+- DEFINING A MODULE = @Module
+- @Module decorator properties:
+    -- providers: array of providers to be available within the module via dependency injection
+    -- controllers: array of controllers to be instantiated within the module
+    -- exports: array of providers to export to other modules
+    -- imports: list of modules required by this module. Any exported provider by these modules will now be available in our module via dependency injection
+
+- GENERATE MODULE = nest g(enerate) module module_name
+
+- CONTROLLERS
+
+- responsible for handling incoming requests and returning responses to the client
+- Bound to a specific path (/tasks)
+- contain handlers, which handle endpoints and request method (GET, POST, DELETE, etc.)
+-can take advantage of dependency injection to consume providers within the same module
+
+- DEFINING A CONTROLLER = by decorating a class with the @Controller decorator
+- accepts a string, which is the path to be handled by the controller 
+
+- HANDLERS
+
+- are method within the controller class
+- decorated with decorators @Get, @Post, etc 
+
+- CREATE CONTROLLER = nest g controller controller_name (--no-spec == optional, not create .spec file)
